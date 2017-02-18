@@ -1,6 +1,6 @@
 .pos 0x100
                  ld $array, r0            # r0 = address of array[0]
-                 ld (r0), r1		          # r1 = array[0]
+                 ld (r0), r1		        # r1 = array[0]
                  ld $t, r2                # r2 = address of t
                  st r1, (r2)		          # t = array[0]
                  ld $array, r0            # r0 = address of array[0]
