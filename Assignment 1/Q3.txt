@@ -1,0 +1,5 @@
+0x1FA2A21F
+
+any integer where:
+byte 1 = byte 4
+byte 2 = byte 3

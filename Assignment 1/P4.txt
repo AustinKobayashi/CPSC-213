@@ -1,0 +1,10 @@
+00 00 00 00    tests the base case
+00 00 00 80    bit 8 of the 4th byte is 1. Little endian value will be negative and also the lowest possible int value with 32 bits
+00 00 80 00    bit 8 of the 3rd byte is 1.
+00 80 00 00    bit 8 of the 2nd byte is 1. Little endian and big endian values should be opposite of the test above
+80 00 00 00    bit 8 of the 1st byte is 1. Big endian value will be negative and also the lowest possible int value
+8f ff ff 8f    byte 1 = byte 4. byte 2 = byte 3. Little and big endian values should be equal
+ff ff ff 00    big endian value will be negative and little endian value will be positive
+ff ff ff ff    largest possible hex number with 4 bytes. Little endian and big endian should both equal -1
+7F FF FF FF    Big endian should equal 2147483647, the largest possible int value with 32 bits
+80 00 00 00    big endian will equal to the smallest possible int value with 32 bits

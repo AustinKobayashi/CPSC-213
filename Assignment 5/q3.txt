@@ -1,0 +1,1 @@
+The bug is in the list_delete_element method. This method will free the value of the element and free the element itself when list_delete is called. Since the tree nodes are pointers to the list, they are now dangling pointers since the list has been deleted.

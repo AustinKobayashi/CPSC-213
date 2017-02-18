@@ -1,0 +1,4 @@
+Since the computer on which the program is running uses an Intel processor, it will be using Little Endian. Whereas the Hubble Telescope will be using Big Endian, so we must flip the order of the bytes.
+
+Ra = 0x65F60700
+D = 0x8151DEFF
