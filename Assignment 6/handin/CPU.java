@@ -174,7 +174,7 @@ public class CPU extends AbstractSM213CPU {
                 break;
 
             case 0xc: // j o(rr) ............... crpp  (pp = o / 2)
-                pc.set(reg.get(insOp0.get()) + insOpImm.getUnsigned() * 4);
+                pc.set(reg.get(insOp0.get()) + insOpImm.getUnsigned() * 2);
                 break;
 
             case 0xf: // halt or nop ............. f?--
