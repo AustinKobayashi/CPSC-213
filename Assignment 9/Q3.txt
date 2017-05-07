@@ -1,0 +1,34 @@
+time ./tRead 10
+71
+
+real	0m0.018s
+user	0m0.005s
+sys	0m0.010s
+
+
+
+time ./tRead 100
+1466043
+
+real	0m0.023s
+user	0m0.005s
+sys	0m0.015s
+
+
+
+time ./tRead 1000
+2463576363942
+
+real	0m0.075s
+user	0m0.010s
+sys	0m0.063s
+
+
+
+We can see that the read times for tRead are significantly faster than those of sRead, similar to
+aRead. tRead is slightly slower than aRead, but still quite close in terms of speed. A good explanation for 
+this can be found when we examine the system times. tRead has much longer system times than aRead does,
+meaning that tRead spends more time running in the operating system. This is caused by the overhead of 
+many threads, and these threads are the reason why tRead is slightly slower than aRead, but still faster
+than sRead due to parallelism.  
+

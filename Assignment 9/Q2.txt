@@ -1,0 +1,32 @@
+time ./aRead 10
+71
+
+real	0m0.015s
+user	0m0.011s
+sys	0m0.003s
+
+
+
+time ./aRead 100
+1466043
+
+real	0m0.016s
+user	0m0.011s
+sys	0m0.003s
+
+
+
+time ./aRead 1000
+2463576363942
+
+real	0m0.017s
+user	0m0.013s
+sys	0m0.004s
+
+
+
+We can see that the read times for aRead are significantly faster than those of sRead.
+Small numbers of disk reads are faster for aRead, and large number of disk reads are
+much faster. The reason for this is quite simple: sRead waits for each block to
+be read and aRead does not. aRead can process multiple requests in parallel, therefore
+it does not follow the linear trend of (number of reads) * 10ms. 

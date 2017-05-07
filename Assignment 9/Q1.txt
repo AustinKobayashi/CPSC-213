@@ -1,0 +1,33 @@
+time ./sRead 10
+71
+
+real	0m0.114s
+user	0m0.108s
+sys	0m0.003s
+
+
+
+time ./sRead 100
+1466043
+
+real	0m1.093s
+user	0m1.072s
+sys	0m0.013s
+
+
+
+time ./sRead 1000
+2463576363942
+
+real	0m10.854s
+user	0m10.697s
+sys	0m0.106s
+
+
+
+Since sRead schedules the read then waits for its completion, we can see that 
+the real times are linearly proportional to the number of reads. Since a read 
+takes 10ms on our simulated disk, the expected time for 10 reads is 
+10ms * 10 or 0.1s. The actual time it took was 0.114s, which is a very close value. 
+Similarly, 100 reads should take 1s and 1000 reads should take 10s. Our actual 
+values are very close to the expected values of (number of reads) * 10ms.
